@@ -114,7 +114,7 @@
 
         .use-cases {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 14px;
             width: 100%;
             margin-bottom: 44px;
@@ -394,6 +394,11 @@
                 <div class="use-case-title">Ferramenta SaaS</div>
                 <div class="use-case-desc">Plataforma de automacao empresarial com inteligencia artificial.</div>
             </div>
+            <div class="use-case">
+                <div class="use-case-icon">&#129302;</div>
+                <div class="use-case-title">Agentes de AI</div>
+                <div class="use-case-desc">Agentes inteligentes para atendimento, vendas e processos automatizados.</div>
+            </div>
         </div>
 
         <div class="price-box">
@@ -401,9 +406,6 @@
             <div class="price-label">Preco especial</div>
             <div class="price">R$ 20.000</div>
             <div class="price-sub">ou 12x de R$ 1.666,67 sem juros</div>
-            <a href="mailto:lino.v.victor@gmail.com?subject=Interesse%20em%20chatgptbusiness.com.br&body=Ol%C3%A1%2C%20tenho%20interesse%20no%20dom%C3%ADnio%20chatgptbusiness.com.br.%20Podemos%20negociar%3F" class="cta-btn">
-                &#9993; Fazer Proposta
-            </a>
         </div>
 
         <div class="contact-area">
@@ -437,7 +439,8 @@
                 'Empresa: ' + (fd.get('empresa') || 'N/A') + '\n\n' +
                 'Mensagem:\n' + fd.get('mensagem')
             );
-            window.location.href = 'mailto:lino.v.victor@gmail.com?subject=' + subject + '&body=' + body;
+            var r = [108,105,110,111,46,118,46,118,105,99,116,111,114,64,103,109,97,105,108,46,99,111,109];
+            window.location.href = 'mai' + 'lto:' + r.map(function(c){return String.fromCharCode(c)}).join('') + '?subject=' + subject + '&body=' + body;
 
             const toast = document.getElementById('toast');
             toast.classList.add('show');
